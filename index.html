@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodePintar | Grafik Fungsi Matematika</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Grafik Fungsi Matematika</h1>
+      <form id="graphForm">
+        <label for="function">Pilih Fungsi:</label>
+        <select id="function" name="function">
+          <option value="sin">Sinus (sin(x))</option>
+          <option value="cos">Kosinus (cos(x))</option>
+          <option value="parabola">Parabola (x^2)</option>
+        </select>
+
+        <label for="xMin">Nilai x Minimum:</label>
+        <input type="number" id="xMin" name="xMin" step="any" required />
+
+        <label for="xMax">Nilai x Maksimum:</label>
+        <input type="number" id="xMax" name="xMax" step="any" required />
+
+        <button type="button" onclick="drawGraph()">Gambar Grafik</button>
+      </form>
+      <div id="chartContainer">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
